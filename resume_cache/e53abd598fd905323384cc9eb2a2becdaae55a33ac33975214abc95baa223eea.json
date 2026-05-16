@@ -1,0 +1,273 @@
+{
+  "resume_hash": "e53abd598fd905323384cc9eb2a2becdaae55a33ac33975214abc95baa223eea",
+  "already_exists": false,
+  "parsed": {
+    "salutation": null,
+    "first_name": "Uma",
+    "middle_name": "Maheswara",
+    "last_name": "Reddy",
+    "email": "umamahesh8838@gmail.com",
+    "alt_email": null,
+    "contact_number": "+91 8008961149",
+    "alt_contact_number": null,
+    "linkedin_url": "https://www.linkedin.com/in/uma-maheswara-reddy-molakala",
+    "github_url": "https://github.com/umamahesh8838",
+    "portfolio_url": null,
+    "date_of_birth": "2005-07-01",
+    "current_city": "Faridabad",
+    "gender": null,
+    "school": [
+      {
+        "standard": "10th",
+        "board": null,
+        "school_name": "Montessori EM School",
+        "percentage": 98.0,
+        "passing_year": 2020
+      },
+      {
+        "standard": "12th",
+        "board": null,
+        "school_name": "Rgukt sklm College",
+        "percentage": 96.0,
+        "passing_year": 2022
+      }
+    ],
+    "education": [
+      {
+        "college_name": "Manav Rachna International Institute of Research and Studies",
+        "course_name": "Bachelor of Technology",
+        "specialization_name": null,
+        "start_year": null,
+        "end_year": 2026,
+        "cgpa": 8.5,
+        "percentage": 8.5
+      }
+    ],
+    "workexp": [
+      {
+        "company_name": "Innovate Intern",
+        "company_location": null,
+        "designation": "Data Science Intern",
+        "employment_type": "Internship",
+        "start_date": "2025-06-01",
+        "end_date": "2025-07-01",
+        "is_current": false
+      }
+    ],
+    "projects": [
+      {
+        "project_title": "Personalized Emotional AI Chatbot",
+        "project_description": "Developed a conversational AI chatbot capable of understanding and responding empathetically to user inputs using prompt-based LLM interactions. Built a fast, responsive interface with backend support for data handling and real-time chat, ensuring smooth user experience. Implemented emotion-aware prompts to guide the chatbot’s responses, aiming to provide supportive and engaging interactions. Optimized data preprocessing and prompt design to improve the relevance, coherence, and empathy of responses without full model fine-tuning.",
+        "achievements": null,
+        "project_start_date": "2025-06-01",
+        "project_end_date": "2025-10-01",
+        "workexp_company_name": "Innovate Intern",
+        "skills_used": [
+          "Pandas",
+          "NumPy",
+          "Matplotlib",
+          "Scikit-learn",
+          "Seaborn",
+          "LLM"
+        ]
+      },
+      {
+        "project_title": "LegalBERT: Predicting Justice",
+        "project_description": "Pioneered a cutting-edge predictive model using BERT embeddings, boosting legal case outcome prediction accuracy and pushing the boundaries of legal analytics. Engineered an advanced machine learning pipeline by integrating BERT for text feature extraction with models like Logistic Regression, Random Forest, SVM, XGBoost, and Neural Networks, delivering robust and insightful predictions. Elevated data integrity through meticulous preprocessing, addressing missing values and scaling features which turbocharged model performance and reliability. Demonstrated the transformative power of NLP and machine learning in legal decision-making by achieving high evaluation metrics (accuracy, precision, recall, F1 score), showcasing the effectiveness of your approach.",
+        "achievements": null,
+        "project_start_date": "2023-07-01",
+        "project_end_date": "2024-11-01",
+        "workexp_company_name": "Innovate Intern",
+        "skills_used": [
+          "BERT",
+          "Logistic Regression",
+          "Random Forest",
+          "SVM",
+          "XGBoost",
+          "Neural Networks"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "name": "Python",
+        "complexity": "Expert"
+      },
+      {
+        "name": "C",
+        "complexity": null
+      },
+      {
+        "name": "C++",
+        "complexity": null
+      },
+      {
+        "name": "Data Structures and Algorithms (DSA) using C++",
+        "complexity": null
+      },
+      {
+        "name": "NumPy",
+        "complexity": null
+      },
+      {
+        "name": "Pandas",
+        "complexity": null
+      },
+      {
+        "name": "Scikit-learn",
+        "complexity": null
+      },
+      {
+        "name": "Seaborn",
+        "complexity": null
+      },
+      {
+        "name": "Matplotlib",
+        "complexity": null
+      },
+      {
+        "name": "LLM",
+        "complexity": null
+      }
+    ],
+    "languages": [
+      {
+        "language_name": "English"
+      },
+      {
+        "language_name": "Telugu"
+      },
+      {
+        "language_name": "Hindi"
+      }
+    ],
+    "certifications": [
+      {
+        "certification_name": "LinkedIn Certification",
+        "issuing_organization": "LinkedIn",
+        "certification_type": null,
+        "issue_date": "2024-02-01",
+        "expiry_date": null,
+        "is_lifetime": true,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Microsoft Certification",
+        "issuing_organization": "Microsoft",
+        "certification_type": "Microsoft Azure AI Fundamentals",
+        "issue_date": "2024-07-01",
+        "expiry_date": "2024-10-01",
+        "is_lifetime": false,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Python",
+        "issuing_organization": null,
+        "certification_type": "Data Types, Control Flow, Functions and Modules, Comprehensions",
+        "issue_date": "2023-08-01",
+        "expiry_date": null,
+        "is_lifetime": true,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Data Structures",
+        "issuing_organization": null,
+        "certification_type": "Arrays, Linked Lists, stacks, Queues, Trees, Binary Search Trees, Sliding Window",
+        "issue_date": "2023-08-01",
+        "expiry_date": null,
+        "is_lifetime": true,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Object Oriented Programming using python",
+        "issuing_organization": null,
+        "certification_type": "Encapsulation, Inheritance, Polymorphism, Abstraction, classes and Objects, Method Overloading and Overriding",
+        "issue_date": "2023-08-01",
+        "expiry_date": null,
+        "is_lifetime": true,
+        "certificate_url": null,
+        "credential_id": null
+      }
+    ],
+    "interests": [
+      {
+        "name": "Machine Learning",
+        "is_inferred": null
+      }
+    ],
+    "addresses": [
+      {
+        "address_line_1": null,
+        "address_line_2": null,
+        "landmark": null,
+        "pincode": null,
+        "city_name": "Faridabad",
+        "state_name": "Haryana",
+        "country_name": "India",
+        "address_type": "current"
+      }
+    ]
+  },
+  "quality": {
+    "score": 98,
+    "max_score": 100,
+    "grade": "A+",
+    "grade_label": "Excellent",
+    "grade_color": "#16a34a",
+    "breakdown": {
+      "contact_info": {
+        "score": 20,
+        "max": 20,
+        "label": "Contact Information"
+      },
+      "education": {
+        "score": 18,
+        "max": 20,
+        "label": "Education"
+      },
+      "skills": {
+        "score": 15,
+        "max": 15,
+        "label": "Skills",
+        "count": 10
+      },
+      "work_experience": {
+        "score": 20,
+        "max": 20,
+        "label": "Work Experience",
+        "count": 1
+      },
+      "projects": {
+        "score": 15,
+        "max": 15,
+        "label": "Projects",
+        "count": 2
+      },
+      "certifications": {
+        "score": 5,
+        "max": 5,
+        "label": "Certifications",
+        "count": 5
+      },
+      "languages": {
+        "score": 3,
+        "max": 3,
+        "label": "Languages",
+        "count": 3
+      },
+      "interests": {
+        "score": 2,
+        "max": 2,
+        "label": "Interests",
+        "count": 1
+      }
+    },
+    "missing_sections": [],
+    "suggestions": [],
+    "is_strong": true
+  }
+}
