@@ -24,13 +24,13 @@ odbcinst -j
 pyodbc.drivers()
 ```
 
-#### Solution 1b: Add startup.sh to Azure
+#### Solution 1b: Add Python startup to Azure
 1. In Azure App Service → Configuration → General settings
 2. Set "Startup Command" to:
    ```
-   /home/site/wwwroot/startup.sh
+   python azure_startup.py
    ```
-3. Ensure `startup.sh` is in your repository root
+3. Redeploy the app so Azure picks up the Python startup script
 
 #### Solution 1c: Check Environment Variables
 1. Azure Portal → App Service → Configuration
@@ -60,9 +60,8 @@ pyodbc.Error: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source na
 ```
 
 **Solution:**
-1. Add `startup.sh` to your repository
-2. Configure Azure startup command (see Issue 1b)
-3. Or create a `Dockerfile` with ODBC installation
+1. Configure Azure startup command to `python azure_startup.py` (see Issue 1b)
+2. If your deployment truly requires ODBC at the OS level, use a `Dockerfile` with driver installation
 
 **Dockerfile Example:**
 ```dockerfile
@@ -175,7 +174,7 @@ ModuleNotFoundError: No module named 'pyodbc'
 
 **Solution:**
 1. Reinstall requirements: `pip install --upgrade -r requirements.txt`
-2. In Azure, ensure startup.sh runs: `pip install -r requirements.txt`
+2. In Azure, ensure `python azure_startup.py` runs the app startup checks
 3. Check Python environment: `pip list | grep pyodbc`
 
 **Verification:**
@@ -255,7 +254,7 @@ python -c "import pyodbc; print(pyodbc.version)"
 ## ✅ Pre-Deployment Checklist
 
 - [ ] All environment variables set in Azure Portal
-- [ ] ODBC Driver 18 installed (via startup.sh or Dockerfile)
+- [ ] If using Docker, the ODBC Driver 18 is installed in the image
 - [ ] pyodbc installed locally and verified
 - [ ] Connection string tested locally
 - [ ] Azure SQL firewall allows Web App
@@ -263,7 +262,7 @@ python -c "import pyodbc; print(pyodbc.version)"
 - [ ] `/health` endpoint returns `"status": "ok"`
 - [ ] `requirements.txt` updated without MySQL drivers
 - [ ] `config.py` uses environment variables
-- [ ] `startup.sh` has executable permissions
+- [ ] `azure_startup.py` is present in the deployed package
 
 ---
 
@@ -327,7 +326,7 @@ env | grep DB_
    - ✅ Removed MySQL drivers (aiomysql, pymysql)
    - ✅ Kept pyodbc for SQL Server
 
-5. **startup.sh** (NEW)
+5. **azure_startup.py** (NEW)
    - ✅ Installs ODBC Driver 18
    - ✅ Verifies dependencies
    - ✅ Tests database connection
@@ -342,7 +341,7 @@ env | grep DB_
 
 2. **Set Startup Command:**
    - Configuration → General settings
-   - Startup Command: `/home/site/wwwroot/startup.sh`
+   - Startup Command: `python azure_startup.py`
 
 3. **Deploy code:**
    ```bash
@@ -365,7 +364,7 @@ env | grep DB_
 
 ## 🆘 Still Having Issues?
 
-1. Check startup.sh execution in logs
+1. Check `azure_startup.py` execution in logs
 2. Verify environment variables are exactly as expected
 3. Test connection string locally first
 4. Ensure ODBC Driver 18 is installed

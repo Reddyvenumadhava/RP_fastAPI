@@ -59,12 +59,11 @@ async with AsyncSessionLocal() as db:
 + pyodbc>=5.0.1
 ```
 
-### 5. **startup.sh** (NEW) - Automated Setup
-```bash
-#!/bin/bash
-# Installs ODBC Driver 18
-# Verifies dependencies
-# Tests database connection
+### 5. **azure_startup.py** (NEW) - Automated Setup
+```python
+# Verifies environment variables
+# Verifies Python dependencies
+# Starts the FastAPI app with uvicorn
 ```
 
 ---
@@ -103,10 +102,10 @@ Navigate to: **App Service → Configuration → General settings**
 
 Set **Startup command** to:
 ```
-/home/site/wwwroot/startup.sh
+python azure_startup.py
 ```
 
-This ensures ODBC driver is installed on deployment.
+This starts the Python App Service entrypoint directly and avoids shell-specific startup failures.
 
 ### Step 3: Deploy Code to Azure
 
@@ -228,20 +227,21 @@ env | grep DB_
 
 ### Issue: "Application Error"
 ```bash
-# Fix 1: Check startup.sh execution
+# Fix 1: Check azure_startup.py execution
 az webapp log tail --resource-group <rg> --name <app-name>
 
-# Look for: ODBC driver installation errors
+# Look for: Python startup errors or missing environment variables
 
 # Fix 2: Update Startup command in Azure Portal
-Startup command: /home/site/wwwroot/startup.sh
+Startup command: python azure_startup.py
 
-# Fix 3: Redeploy with fresh startup.sh
+# Fix 3: Redeploy with the Python startup script
 ```
 
 ### Issue: "ODBC Driver not found"
 ```bash
-# The startup.sh should handle this, but if not:
+# The Python startup script should handle app boot. If ODBC is still required,
+# move to a Docker-based deployment and install the driver there:
 # SSH into app and run manually:
 apt-get update
 ACCEPT_EULA=Y apt-get install -y msodbcsql18
@@ -273,7 +273,7 @@ RP_flask/
 ├── database.py            ✏️  MODIFIED - Startup diagnostics
 ├── main.py                ✏️  MODIFIED - Production logging
 ├── requirements.txt       ✏️  MODIFIED - MSSQL/pyodbc optimized
-├── startup.sh             ✨ NEW - ODBC driver installation
+├── azure_startup.py       ✨ NEW - Python startup entrypoint
 ├── app.py                 ✨ NEW - Azure App Service wrapper
 ├── .deployment            ✨ NEW - Azure deployment configuration
 ├── web.config             ✨ NEW - IIS configuration (optional)
@@ -328,8 +328,8 @@ asyncio.run(test())
 ## 🚀 Deployment Checklist
 
 - [ ] All environment variables set in Azure Portal
-- [ ] Startup command set to: `/home/site/wwwroot/startup.sh`
-- [ ] Code deployed to Azure (startup.sh included)
+- [ ] Startup command set to: `python azure_startup.py`
+- [ ] Code deployed to Azure (azure_startup.py included)
 - [ ] Application logs show no errors
 - [ ] `/health` endpoint returns `status: ok`
 - [ ] Database test endpoint works
@@ -364,7 +364,7 @@ Response back to User
 1. Settings read from environment (Azure Portal)
 2. Connection string built with environment values
 3. pyodbc used for MSSQL (not aioodbc)
-4. ODBC Driver 18 installed via startup.sh
+4. Use Docker only if you need OS-level driver installation; otherwise `azure_startup.py` starts the app directly
 5. NullPool used for Azure-optimized connections
 
 ---
