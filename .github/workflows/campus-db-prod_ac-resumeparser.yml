@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - AC-resumeparser
 on:
   push:
     branches:
-      - Campus-DB-Prod
+      - ATS-DB-Prod
   workflow_dispatch:
 
 jobs:
@@ -61,6 +61,6 @@ jobs:
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'AC-resumeparser'
+          app-name: 'ats-resume-parser-qa'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7BA6BB041F4B45B8A6305962FCA82041 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_QA }}
