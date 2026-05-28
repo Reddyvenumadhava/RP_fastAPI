@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - AC-resumeparser
 on:
   push:
     branches:
-      - ATS-DB-Prod
+      - ATS-DB-QA
   workflow_dispatch:
 
 jobs:
