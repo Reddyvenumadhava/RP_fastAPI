@@ -8,6 +8,9 @@ import os
 import sys
 import logging
 import subprocess
+from pathlib import Path
+import importlib.util
+import sys
 
 # Configure logging
 logging.basicConfig(
@@ -70,6 +73,18 @@ def main():
     logger.info("\nStep 5: Starting FastAPI application...")
     logger.info("=" * 70)
     
+    # Ensure core dependencies are installed (useful when Azure hasn't installed them yet)
+    try:
+        if importlib.util.find_spec("fastapi") is None:
+            req_path = Path(__file__).with_name("requirements.txt")
+            if req_path.exists():
+                logger.info("FastAPI not found in runtime — installing requirements.txt...")
+                subprocess.run([sys.executable, "-m", "pip", "install", "-r", str(req_path)], check=True)
+                logger.info("✓ requirements installed")
+            else:
+                logger.warning("requirements.txt not found; cannot auto-install dependencies")
+    except Exception as e:
+        logger.error(f"Failed to ensure dependencies: {e}")
     port = int(os.getenv("PORT", 8000))
     
     # Import and run the app
