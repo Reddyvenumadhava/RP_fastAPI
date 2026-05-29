@@ -83,6 +83,24 @@ def main():
         try:
             subprocess.run([sys.executable, "-m", "pip", "install", "pydantic>=2.5.0", "pydantic-settings>=2.0.0"], check=True)
             logger.info("✓ pydantic and pydantic_settings installed")
+            # Validate installation: invalidate import caches then check spec/import
+            try:
+                import importlib
+                importlib.invalidate_caches()
+                spec = importlib.util.find_spec("pydantic_settings")
+                if spec is None:
+                    logger.error("pydantic_settings still not found after install")
+                    logger.error(f"sys.executable={sys.executable}")
+                    logger.error(f"sys.path={sys.path}")
+                    try:
+                        out = subprocess.check_output([sys.executable, "-m", "pip", "show", "pydantic-settings"], stderr=subprocess.STDOUT, text=True)
+                        logger.error("pip show pydantic-settings output:\n" + out)
+                    except Exception as e:
+                        logger.error(f"Failed to run 'pip show': {e}")
+                else:
+                    logger.info("pydantic_settings importable after install")
+            except Exception as e:
+                logger.error(f"Diagnostic import check failed: {e}")
         except Exception as e:
             logger.error(f"Failed to install pydantic packages: {e}")
             # Continue — the subsequent import will fail and exit with a clear message
