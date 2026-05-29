@@ -48,6 +48,20 @@ def main():
         subprocess.run([sys.executable, "-m", "pip", "install", "PyMySQL==1.1.0"], check=True)
         logger.info("✓ pymysql installed")
 
+    # Ensure the rest of the application dependencies are available before
+    # importing config.py, which depends on pydantic_settings.
+    try:
+        if importlib.util.find_spec("pydantic_settings") is None or importlib.util.find_spec("fastapi") is None:
+            req_path = Path(__file__).with_name("requirements.txt")
+            if req_path.exists():
+                logger.info("Core dependencies missing — installing requirements.txt before loading config...")
+                subprocess.run([sys.executable, "-m", "pip", "install", "-r", str(req_path)], check=True)
+                logger.info("✓ requirements installed")
+            else:
+                logger.warning("requirements.txt not found; cannot auto-install dependencies")
+    except Exception as e:
+        logger.error(f"Failed to ensure core dependencies: {e}")
+
     # Step 3: Platform check
     logger.info("\nStep 3: Checking runtime platform...")
     if os.path.exists("/etc/os-release"):
@@ -57,6 +71,21 @@ def main():
     
     # Step 4: Test configuration loading
     logger.info("\nStep 4: Loading configuration...")
+    # Some Azure runtimes may not have installed all packages yet; ensure
+    # `pydantic-settings` and `pydantic` are available before importing
+    # `config.py` which depends on them.
+    try:
+        import pydantic_settings  # type: ignore
+        import pydantic  # type: ignore
+        logger.info("✓ pydantic and pydantic_settings available")
+    except Exception:
+        logger.warning("pydantic or pydantic_settings missing — installing minimal packages...")
+        try:
+            subprocess.run([sys.executable, "-m", "pip", "install", "pydantic>=2.5.0", "pydantic-settings>=2.0.0"], check=True)
+            logger.info("✓ pydantic and pydantic_settings installed")
+        except Exception as e:
+            logger.error(f"Failed to install pydantic packages: {e}")
+            # Continue — the subsequent import will fail and exit with a clear message
     try:
         from config import get_settings
         settings = get_settings()
@@ -73,18 +102,6 @@ def main():
     logger.info("\nStep 5: Starting FastAPI application...")
     logger.info("=" * 70)
     
-    # Ensure core dependencies are installed (useful when Azure hasn't installed them yet)
-    try:
-        if importlib.util.find_spec("fastapi") is None:
-            req_path = Path(__file__).with_name("requirements.txt")
-            if req_path.exists():
-                logger.info("FastAPI not found in runtime — installing requirements.txt...")
-                subprocess.run([sys.executable, "-m", "pip", "install", "-r", str(req_path)], check=True)
-                logger.info("✓ requirements installed")
-            else:
-                logger.warning("requirements.txt not found; cannot auto-install dependencies")
-    except Exception as e:
-        logger.error(f"Failed to ensure dependencies: {e}")
     port = int(os.getenv("PORT", 8000))
     
     # Import and run the app
