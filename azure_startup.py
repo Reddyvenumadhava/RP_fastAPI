@@ -57,6 +57,44 @@ def main():
     
     # Step 4: Test configuration loading
     logger.info("\nStep 4: Loading configuration...")
+    # Ensure pydantic and pydantic-settings are available before importing config
+    try:
+        import importlib
+        def _is_importable(name: str) -> bool:
+            try:
+                return importlib.util.find_spec(name) is not None
+            except Exception:
+                return False
+
+        if not (_is_importable("pydantic") and _is_importable("pydantic_settings")):
+            logger.warning("pydantic or pydantic_settings not importable — attempting install...")
+            req_path = Path(__file__).with_name("requirements.txt")
+            if req_path.exists():
+                cmd = [sys.executable, "-m", "pip", "install", "-r", str(req_path)]
+            else:
+                cmd = [sys.executable, "-m", "pip", "install", "pydantic>=2.5.0", "pydantic-settings>=2.0.0"]
+            try:
+                proc = subprocess.run(cmd, check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+                logger.info("pip output:\n" + (proc.stdout or "<no output>"))
+                importlib.invalidate_caches()
+                if not (_is_importable("pydantic") and _is_importable("pydantic_settings")):
+                    logger.error("pydantic_settings still not importable after install attempts")
+                    try:
+                        out = subprocess.check_output([sys.executable, "-m", "pip", "show", "pydantic-settings"], stderr=subprocess.STDOUT, text=True)
+                        logger.error("pip show pydantic-settings output:\n" + out)
+                    except Exception as e:
+                        logger.error(f"pip show failed: {e}")
+                    logger.error(f"sys.executable={sys.executable}")
+                    logger.error(f"sys.path={sys.path}")
+                    sys.exit(1)
+                else:
+                    logger.info("✓ pydantic and pydantic_settings importable now")
+            except Exception as e:
+                logger.error(f"Failed to run pip install: {e}")
+                sys.exit(1)
+    except Exception as e:
+        logger.error(f"Dependency check failed: {e}")
+        sys.exit(1)
     try:
         from config import get_settings
         settings = get_settings()
