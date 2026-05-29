@@ -124,6 +124,29 @@ def main():
     
     # Import and run the app
     try:
+        # Ensure FastAPI is present before starting uvicorn
+        try:
+            import fastapi  # noqa: F401
+            logger.info("✓ fastapi available")
+        except Exception:
+            logger.warning("fastapi not found — installing requirements.txt...")
+            req_path = Path(__file__).with_name("requirements.txt")
+            if req_path.exists():
+                try:
+                    subprocess.run([sys.executable, "-m", "pip", "install", "-r", str(req_path)], check=True)
+                    import importlib
+                    importlib.invalidate_caches()
+                    logger.info("✓ requirements installed; validating fastapi import")
+                except Exception as e:
+                    logger.error(f"Failed to install requirements: {e}")
+            else:
+                try:
+                    subprocess.run([sys.executable, "-m", "pip", "install", "fastapi[all]"], check=True)
+                    import importlib
+                    importlib.invalidate_caches()
+                except Exception as e:
+                    logger.error(f"Failed to install fastapi directly: {e}")
+
         import uvicorn
         
         logger.info(f"Starting uvicorn on port {port}")
