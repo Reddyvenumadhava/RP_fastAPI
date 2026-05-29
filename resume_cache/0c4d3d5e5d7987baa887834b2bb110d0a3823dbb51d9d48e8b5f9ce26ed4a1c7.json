@@ -1,0 +1,367 @@
+{
+  "resume_hash": "0c4d3d5e5d7987baa887834b2bb110d0a3823dbb51d9d48e8b5f9ce26ed4a1c7",
+  "already_exists": false,
+  "parsed": {
+    "salutation": null,
+    "first_name": "BC",
+    "middle_name": "JASWANTH",
+    "last_name": "REDDY",
+    "email": "jaswanthreddy2028116@gmail.com",
+    "alt_email": null,
+    "contact_number": "+91 9440993988",
+    "alt_contact_number": null,
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "date_of_birth": null,
+    "current_city": null,
+    "gender": null,
+    "school": [
+      {
+        "standard": "Secondary School",
+        "board": null,
+        "school_name": "Sri Santhinikethan School",
+        "percentage": 98.1,
+        "passing_year": 2020
+      },
+      {
+        "standard": "Higher Secondary School",
+        "board": null,
+        "school_name": "NRI Junior College",
+        "percentage": 87.5,
+        "passing_year": 2022
+      }
+    ],
+    "education": [
+      {
+        "college_name": "Indian Institute of Information Technology Raichur",
+        "course_name": "B.Tech in Computer Science Engineering",
+        "specialization_name": null,
+        "start_year": 2022,
+        "end_year": 2026,
+        "cgpa": 7.48,
+        "percentage": null
+      }
+    ],
+    "workexp": [],
+    "projects": [
+      {
+        "project_title": "Movie Booking System",
+        "project_description": "Designed and implemented an online movie ticket booking system with a user-friendly UI using HTML, CSS, JavaScript, and Bootstrap, improving usability and customer engagement. Implemented backend logic in PHP with MySQL and optimized SQL queries for faster load times (30% improvement). Developed features for seat selection, 3D view of theater and user account management. Added role-based access control for admins and users; included validation, session handling, and security features.",
+        "achievements": null,
+        "project_start_date": "2023-06-01",
+        "project_end_date": "2023-12-01",
+        "workexp_company_name": null,
+        "skills_used": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Bootstrap",
+          "PHP",
+          "MySQL"
+        ]
+      },
+      {
+        "project_title": "Mini Project – Image-based Detection Quality of Fruits and Vegetables using AI",
+        "project_description": "Implemented a YOLO-based object detection model to classify fruits and vegetables as healthy or rotten and estimate the percentage of damage. Trained the model using a custom-labeled dataset with multiple fruit and vegetable categories. Used Python, YOLOv8, and OpenCV for image processing, detection, and visualization in real-time.",
+        "achievements": null,
+        "project_start_date": "2025-01-01",
+        "project_end_date": "2025-04-01",
+        "workexp_company_name": null,
+        "skills_used": [
+          "Python",
+          "YOLOv8",
+          "OpenCV"
+        ]
+      },
+      {
+        "project_title": "Multi-Agent AI-System for Cancer Detection",
+        "project_description": "Developed a multi-agent AI-based medical image analysis system for cancer detection across Pathology, Brain MRI, Mammography, Skin Cancer, and Lung Cancer, using a locally deployed MedGemma-4B-IT model. Designed specialized prompt-driven agents to extract malignancy indicators, risk levels, and clinical recommendations (biopsy, follow-up, routine, urgent). Implemented a custom AI scoring framework to compute malignancy risk, confidence level, and weighted diagnostic scores from model outputs. Built a FastAPI-based end-to-end application with automated clinician-style PDF report generation, ensuring data privacy through local inference.",
+        "achievements": null,
+        "project_start_date": "2025-06-01",
+        "project_end_date": "2025-12-01",
+        "workexp_company_name": null,
+        "skills_used": [
+          "FastAPI"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "name": "C",
+        "complexity": null
+      },
+      {
+        "name": "Python",
+        "complexity": null
+      },
+      {
+        "name": "SQL",
+        "complexity": null
+      },
+      {
+        "name": "MySQL",
+        "complexity": null
+      },
+      {
+        "name": "RDBMS",
+        "complexity": null
+      },
+      {
+        "name": "HTML",
+        "complexity": null
+      },
+      {
+        "name": "CSS",
+        "complexity": null
+      },
+      {
+        "name": "JavaScript",
+        "complexity": null
+      },
+      {
+        "name": "PHP",
+        "complexity": null
+      },
+      {
+        "name": "Bootstrap",
+        "complexity": null
+      },
+      {
+        "name": "NumPy",
+        "complexity": null
+      },
+      {
+        "name": "Pandas",
+        "complexity": null
+      },
+      {
+        "name": "Matplotlib",
+        "complexity": null
+      },
+      {
+        "name": "OpenCV",
+        "complexity": null
+      },
+      {
+        "name": "PyTorch",
+        "complexity": null
+      },
+      {
+        "name": "YOLOv8",
+        "complexity": null
+      },
+      {
+        "name": "LangChain",
+        "complexity": null
+      },
+      {
+        "name": "RAG",
+        "complexity": null
+      },
+      {
+        "name": "LLMS",
+        "complexity": null
+      },
+      {
+        "name": "Power BI",
+        "complexity": null
+      },
+      {
+        "name": "Excel",
+        "complexity": null
+      },
+      {
+        "name": "FastAPI",
+        "complexity": null
+      },
+      {
+        "name": "Data Structures",
+        "complexity": null
+      },
+      {
+        "name": "Machine Learning",
+        "complexity": null
+      },
+      {
+        "name": "AI Agents",
+        "complexity": null
+      },
+      {
+        "name": "NLP",
+        "complexity": null
+      },
+      {
+        "name": "Data Visualization",
+        "complexity": null
+      },
+      {
+        "name": "Computer Networks",
+        "complexity": null
+      },
+      {
+        "name": "Operating Systems",
+        "complexity": null
+      }
+    ],
+    "languages": [
+      {
+        "language_name": null
+      }
+    ],
+    "certifications": [
+      {
+        "certification_name": "Data Science Training Program – Python, SQL, Machine Learning, Gen AI",
+        "issuing_organization": "Datateach.ai, Hyderabad",
+        "certification_type": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "is_lifetime": null,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Data Analytics Specialist Training | Udemy",
+        "issuing_organization": null,
+        "certification_type": null,
+        "issue_date": "2025-01-01",
+        "expiry_date": null,
+        "is_lifetime": null,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Data Science Essentials with Python | Cisco",
+        "issuing_organization": null,
+        "certification_type": null,
+        "issue_date": "2025-01-01",
+        "expiry_date": null,
+        "is_lifetime": null,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Microsoft Certified: Power BI Fundamentals | Microsoft",
+        "issuing_organization": null,
+        "certification_type": null,
+        "issue_date": "2026-01-01",
+        "expiry_date": null,
+        "is_lifetime": null,
+        "certificate_url": null,
+        "credential_id": null
+      }
+    ],
+    "interests": [
+      {
+        "name": null,
+        "is_inferred": null
+      },
+      {
+        "name": null,
+        "is_inferred": null
+      },
+      {
+        "name": null,
+        "is_inferred": null
+      }
+    ],
+    "addresses": [
+      {
+        "address_line_1": null,
+        "address_line_2": null,
+        "landmark": null,
+        "pincode": null,
+        "city_name": null,
+        "state_name": null,
+        "country_name": null,
+        "address_type": null
+      },
+      {
+        "address_line_1": null,
+        "address_line_2": null,
+        "landmark": null,
+        "pincode": null,
+        "city_name": null,
+        "state_name": null,
+        "country_name": null,
+        "address_type": null
+      },
+      {
+        "address_line_1": null,
+        "address_line_2": null,
+        "landmark": null,
+        "pincode": null,
+        "city_name": null,
+        "state_name": null,
+        "country_name": null,
+        "address_type": null
+      }
+    ]
+  },
+  "quality": {
+    "score": 72,
+    "max_score": 100,
+    "grade": "B+",
+    "grade_label": "Good",
+    "grade_color": "#84cc16",
+    "breakdown": {
+      "contact_info": {
+        "score": 15,
+        "max": 20,
+        "label": "Contact Information"
+      },
+      "education": {
+        "score": 18,
+        "max": 20,
+        "label": "Education"
+      },
+      "skills": {
+        "score": 15,
+        "max": 15,
+        "label": "Skills",
+        "count": 29
+      },
+      "work_experience": {
+        "score": 0,
+        "max": 20,
+        "label": "Work Experience",
+        "count": 0
+      },
+      "projects": {
+        "score": 15,
+        "max": 15,
+        "label": "Projects",
+        "count": 3
+      },
+      "certifications": {
+        "score": 5,
+        "max": 5,
+        "label": "Certifications",
+        "count": 4
+      },
+      "languages": {
+        "score": 2,
+        "max": 3,
+        "label": "Languages",
+        "count": 1
+      },
+      "interests": {
+        "score": 2,
+        "max": 2,
+        "label": "Interests",
+        "count": 3
+      }
+    },
+    "missing_sections": [
+      "LinkedIn URL",
+      "GitHub URL",
+      "Work experience or internships"
+    ],
+    "suggestions": [
+      "Add your LinkedIn profile URL",
+      "Add your GitHub profile URL",
+      "Add any internships, part-time work, or freelance experience"
+    ],
+    "is_strong": true
+  }
+}

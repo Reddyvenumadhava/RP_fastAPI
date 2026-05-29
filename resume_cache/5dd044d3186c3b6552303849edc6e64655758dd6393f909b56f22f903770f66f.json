@@ -1,0 +1,338 @@
+{
+  "resume_hash": "5dd044d3186c3b6552303849edc6e64655758dd6393f909b56f22f903770f66f",
+  "already_exists": false,
+  "parsed": {
+    "salutation": null,
+    "first_name": "Lokareddy",
+    "middle_name": "Venkanna",
+    "last_name": "Dora",
+    "email": "lvdora92@gmail.com",
+    "alt_email": null,
+    "contact_number": "+91 7569472921",
+    "alt_contact_number": null,
+    "linkedin_url": null,
+    "github_url": "https://github.com/DORA-LOKAREDDY",
+    "portfolio_url": null,
+    "date_of_birth": null,
+    "current_city": "Faridabad",
+    "gender": null,
+    "school": [
+      {
+        "standard": "XII",
+        "board": "Board Of Intermediate Education Andhra Pradesh",
+        "school_name": "Sri Sai Aditya Junior College",
+        "percentage": 95.4,
+        "passing_year": 2022
+      },
+      {
+        "standard": "X",
+        "board": "Andhra Pradesh Board Of Secondary Education",
+        "school_name": "Little Buds PublicSchool",
+        "percentage": 94.6,
+        "passing_year": 2020
+      }
+    ],
+    "education": [
+      {
+        "college_name": "Manav Rachna International University",
+        "course_name": "B.Tech",
+        "specialization_name": "Computer Science s Engineering",
+        "start_year": 2022,
+        "end_year": 2026,
+        "cgpa": 8.53,
+        "percentage": null
+      }
+    ],
+    "workexp": [
+      {
+        "company_name": "PARA GROUP LLC",
+        "company_location": "Remote",
+        "designation": "Software Development Intern",
+        "employment_type": "Internship",
+        "start_date": "2026-01-01",
+        "end_date": null,
+        "is_current": true
+      },
+      {
+        "company_name": "YBI Foundation",
+        "company_location": "Virtual",
+        "designation": "Data Science And Machine Learning Intern",
+        "employment_type": "Internship",
+        "start_date": "2025-06-01",
+        "end_date": "2025-07-01",
+        "is_current": false
+      },
+      {
+        "company_name": "Intrainz Innovation Pvt Ltd.",
+        "company_location": "Virtual",
+        "designation": "Artificial Intelligence Intern",
+        "employment_type": "Internship",
+        "start_date": "2023-09-01",
+        "end_date": "2023-11-01",
+        "is_current": false
+      }
+    ],
+    "projects": [
+      {
+        "project_title": "Agentic AI ChatBot using Langgraph",
+        "project_description": "Designed and implemented an Agentic AI-powered conversational system using LangGraph, enabling autonomous workflow execution, state-based reasoning, and tool-driven decision making. Integrated LangChain and LangSmith to manage LLM prompts, agent coordination, trace execution flows, and debug multi-step AI behaviors efficiently. Developed a scalable Streamlit-based web interface, delivering a ChatGPT-like user experience with conversational memory, modular architecture, and real-time AI interactions.",
+        "achievements": null,
+        "project_start_date": "2025-12-01",
+        "project_end_date": "2026-01-01",
+        "workexp_company_name": "PARA GROUP LLC",
+        "skills_used": [
+          "Python",
+          "LangGraph",
+          "LangChain",
+          "LangSmith",
+          "OpenAI / GeminiAI / LLM APIs",
+          "Streamlit",
+          "Agentic AI Development",
+          "LLM Workflow Orchestration",
+          "Prompt Engineering",
+          "Multi-Step Reasoning",
+          "Tool Calling",
+          "Conversational AI",
+          "State Management",
+          "AI Debugging & Tracing",
+          "Scalable AI Application Development"
+        ]
+      },
+      {
+        "project_title": "Employee Attrition Prediction",
+        "project_description": "Designed and implemented a predictive machine learning model to analyze key factors influencing employee attrition, helping HR teams enhance retention strategies through data- driven insights. Built and compared models using Logistic Regression (88% accuracy) and Random Forest (85% accuracy) to identify the most effective predictive approach. Performed comprehensive Exploratory Data Analysis (EDA), including correlation heatmaps, feature engineering, and confusion matrix evaluation to ensure high model reliability and interpretability.",
+        "achievements": null,
+        "project_start_date": "2024-06-01",
+        "project_end_date": "2024-07-01",
+        "workexp_company_name": null,
+        "skills_used": [
+          "Python",
+          "NumPy",
+          "Pandas",
+          "Scikit-learn",
+          "Matplotlib",
+          "Seaborn",
+          "Machine Learning",
+          "Predictive Analytics",
+          "Data Visualization",
+          "EDA",
+          "Feature Engineering",
+          "Model Evaluation"
+        ]
+      },
+      {
+        "project_title": "Tomato Leaf Disease Detection",
+        "project_description": "Led a team and built an AI-powered system using a ResNet- based deep learning model to accurately classify tomato leaf diseases with 88% prediction accuracy. Developed a dynamic and interactive web application integrated with the trained model, featuring sections such as Home, Models, Dataset, Detect, FAQ, and Login for easy navigation and user engagement. Implemented a real-time image upload and prediction feature, allowing users to upload a tomato leaf image and instantly receive disease classification results along with symptoms, treatments, and preventive measures.",
+        "achievements": null,
+        "project_start_date": "2025-07-01",
+        "project_end_date": "2025-11-01",
+        "workexp_company_name": null,
+        "skills_used": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Bootstrap",
+          "Python",
+          "Deep Learning",
+          "Web Integration",
+          "Front-End Development"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "name": "LangGraph",
+        "complexity": null
+      },
+      {
+        "name": "Machine Learning",
+        "complexity": null
+      },
+      {
+        "name": "Data Analysis",
+        "complexity": null
+      },
+      {
+        "name": "Python",
+        "complexity": null
+      },
+      {
+        "name": "Data Visualization",
+        "complexity": null
+      },
+      {
+        "name": "Deep Learning",
+        "complexity": null
+      },
+      {
+        "name": "Data Structures and Algorithms",
+        "complexity": null
+      },
+      {
+        "name": "Pandas",
+        "complexity": null
+      },
+      {
+        "name": "LangChain",
+        "complexity": null
+      },
+      {
+        "name": "scikit-learn",
+        "complexity": null
+      },
+      {
+        "name": "Matplotlib",
+        "complexity": null
+      },
+      {
+        "name": "PostgreSQL",
+        "complexity": null
+      },
+      {
+        "name": "Seaborn",
+        "complexity": null
+      },
+      {
+        "name": "Streamlit",
+        "complexity": null
+      },
+      {
+        "name": "TensorFlow",
+        "complexity": null
+      },
+      {
+        "name": "MS-Excel",
+        "complexity": null
+      },
+      {
+        "name": "Data Preprocessing",
+        "complexity": null
+      },
+      {
+        "name": "NumPy",
+        "complexity": null
+      }
+    ],
+    "languages": [],
+    "certifications": [
+      {
+        "certification_name": "Data Science Mastery 2025: Excel, Python s Tableau",
+        "issuing_organization": "udemy",
+        "certification_type": null,
+        "issue_date": "2025-09-01",
+        "expiry_date": null,
+        "is_lifetime": true,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Azure AI Engineer Associate, Azure Developer Associate",
+        "issuing_organization": "Microsoft Azure",
+        "certification_type": null,
+        "issue_date": "2025-01-01",
+        "expiry_date": "2026-01-01",
+        "is_lifetime": false,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Exploratory Data Analysis (EDA), Object-Oriented Programming",
+        "issuing_organization": "infosys",
+        "certification_type": null,
+        "issue_date": "2024-02-01",
+        "expiry_date": "2025-03-01",
+        "is_lifetime": false,
+        "certificate_url": null,
+        "credential_id": null
+      },
+      {
+        "certification_name": "Data Structures, Machine Learning With Python, Relational Databases, Data Science Fundamentals",
+        "issuing_organization": "Linkedin",
+        "certification_type": null,
+        "issue_date": "2024-02-01",
+        "expiry_date": "2025-03-01",
+        "is_lifetime": false,
+        "certificate_url": null,
+        "credential_id": null
+      }
+    ],
+    "interests": [],
+    "addresses": [
+      {
+        "address_line_1": null,
+        "address_line_2": null,
+        "landmark": null,
+        "pincode": null,
+        "city_name": null,
+        "state_name": null,
+        "country_name": null,
+        "address_type": null
+      }
+    ]
+  },
+  "quality": {
+    "score": 92,
+    "max_score": 100,
+    "grade": "A+",
+    "grade_label": "Excellent",
+    "grade_color": "#16a34a",
+    "breakdown": {
+      "contact_info": {
+        "score": 17,
+        "max": 20,
+        "label": "Contact Information"
+      },
+      "education": {
+        "score": 20,
+        "max": 20,
+        "label": "Education"
+      },
+      "skills": {
+        "score": 15,
+        "max": 15,
+        "label": "Skills",
+        "count": 18
+      },
+      "work_experience": {
+        "score": 20,
+        "max": 20,
+        "label": "Work Experience",
+        "count": 3
+      },
+      "projects": {
+        "score": 15,
+        "max": 15,
+        "label": "Projects",
+        "count": 3
+      },
+      "certifications": {
+        "score": 5,
+        "max": 5,
+        "label": "Certifications",
+        "count": 4
+      },
+      "languages": {
+        "score": 0,
+        "max": 3,
+        "label": "Languages",
+        "count": 0
+      },
+      "interests": {
+        "score": 0,
+        "max": 2,
+        "label": "Interests",
+        "count": 0
+      }
+    },
+    "missing_sections": [
+      "LinkedIn URL",
+      "Languages known"
+    ],
+    "suggestions": [
+      "Add your LinkedIn profile URL",
+      "Add languages you speak or write",
+      "Add your areas of interest like Machine Learning or Web Development"
+    ],
+    "is_strong": true
+  }
+}
